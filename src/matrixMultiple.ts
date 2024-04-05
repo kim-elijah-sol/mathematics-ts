@@ -1,5 +1,8 @@
 type Matrix = number[][];
 
+/*
+ * 행렬 데이터 곱셈 함수
+ */
 export const matrixMultiple = (a: Matrix, b: Matrix): Matrix => {
   const aRow = a.length;
   const aCol = a[0].length;

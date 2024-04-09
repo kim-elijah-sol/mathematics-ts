@@ -1,6 +1,6 @@
 import { lawOfPowers1 } from "../indexLawOfPowers";
 
-describe("지수법칙", () => {
+describe("지수법칙 1: 지수의 덧셈", () => {
   it("지수법칙 1 : 지수의 덧셈 테스트", () => {
     expect(lawOfPowers1(2, 3, 4)).toBe(128);
     expect(lawOfPowers1(2, 3, 4)).toBe(2 ** 3 * 2 ** 4);

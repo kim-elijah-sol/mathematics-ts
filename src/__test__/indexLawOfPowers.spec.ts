@@ -1,4 +1,9 @@
-import { lawOfPowers1, lawOfPowers2, lawOfPowers3 } from "../indexLawOfPowers";
+import {
+  lawOfPowers1,
+  lawOfPowers2,
+  lawOfPowers3,
+  lawOfPowers4,
+} from "../indexLawOfPowers";
 
 describe("지수법칙 1: 지수의 덧셈", () => {
   it("지수법칙 1 : 지수의 덧셈 테스트", () => {
@@ -34,7 +39,7 @@ describe("지수법칙 2: 지수의 곱셈", () => {
   });
 });
 
-describe("지수법칙 3 : 지수의 뺄셈", () => {
+describe("지수법칙 3: 지수의 뺄셈", () => {
   it("지수법칙 3 : 지수의 뺄셈 테스트", () => {
     expect(lawOfPowers3(2, 5, 3)).toBe(4);
     expect(lawOfPowers3(2, 5, 3)).toBe(2 ** 5 / 2 ** 3);
@@ -48,5 +53,12 @@ describe("지수법칙 3 : 지수의 뺄셈", () => {
   it("지수법칙 3 : 지수의 뺄셈 테스트 > 밑이 음수인 경우도 예외는 아님", () => {
     expect(lawOfPowers3(-2, 5, 2)).toBe(-8);
     expect(lawOfPowers3(-2, 5, 2)).toBe((-2) ** 5 / (-2) ** 2);
+  });
+});
+
+describe("지수법칙 4: 지수의 뺄셈 > 2번째 지수가 1번째 지수보다 큰 경우", () => {
+  it("지수법칙 4 : 지수의 뺄셈 테스트", () => {
+    expect(lawOfPowers4(2, 3, 5)).toBe(1 / 4);
+    expect(lawOfPowers4(2, 3, 5)).toBe(1 / 2 ** (5 - 3));
   });
 });
